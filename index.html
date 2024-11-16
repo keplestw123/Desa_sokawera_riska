@@ -261,131 +261,129 @@
 
             
             /* Gaya untuk Visi dan Misi */
-            #visi-misi {
-                background: linear-gradient(135deg, #f8f9fa, #e9ecef); /* Gradien lembut */
-                padding: 60px 20px;
-                border-radius: 10px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Shadow halus */
-            }
-            
-            .visi-misi-text {
-                text-align: center;
-                margin-bottom: 40px;
-            }
-            
-            .visi-misi-text h2 {
-                font-size: 2.5rem;
-                color: #007BFF; /* Warna biru mencolok */
-                margin-bottom: 20px;
-                font-weight: bold;
-                text-transform: uppercase;
-                text-shadow: 2px 2px 5px rgba(0, 123, 255, 0.2); /* Shadow teks */
-            }
-            
-            .visi-misi-text .visi, .visi-misi-text .misi {
-                margin-bottom: 30px;
-                font-size: 1.2rem;
-                color: #333;
-                line-height: 1.8;
-            }
-            
-            .visi-misi-text .misi ul {
-                list-style-type: disc; /* Menambah ikon */
-                padding-left: 20px;
-            }
-            
-            .visi-misi-text .misi ul li {
-                margin-bottom: 15px;
-                color: #555;
-            }
-            
-            .visi-misi-text .misi strong {
-                color: #007BFF;
-                font-weight: bold;
-            }
-            
-            /* Gaya untuk Foto Kegiatan */
-            .foto-kegiatan {
-                margin-top: 60px;
-            }
-            
-            .foto-kegiatan h3 {
-                text-align: center;
-                font-size: 2rem;
-                color: #007BFF;
-                margin-bottom: 30px;
-                font-weight: bold;
-                text-shadow: 1px 1px 3px rgba(0, 123, 255, 0.3);
-            }
-            
-            .foto-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-                gap: 25px;
-            }
-            
-            .foto-item {
-                position: relative;
-                overflow: hidden;
-                border-radius: 12px;
-                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                aspect-ratio: 4 / 3; /* Menjaga proporsi foto tetap seragam */
-            }
-            
-            .foto-item:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-            }
-            
-            .foto-item img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover; /* Memastikan semua foto memenuhi area */
-                border-radius: 12px;
-                display: block;
-            }
-            
-            .foto-description {
-                text-align: center;
-                padding: 15px;
-                background-color: #fff;
-                border-radius: 0 0 12px 12px;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                font-size: 1rem;
-                color: #333;
-                font-weight: 500;
-                margin-top: -10px;
-            }
-            
-            /* Responsif untuk ukuran layar kecil */
-            @media (max-width: 768px) {
-                .visi-misi-text h2 {
-                    font-size: 2rem;
-                }
-            
-                .foto-kegiatan h3 {
-                    font-size: 1.8rem;
-                }
-            
-                .foto-grid {
-                    grid-template-columns: 1fr 1fr;
-                }
-            }
-            
-            @media (max-width: 480px) {
-                .foto-grid {
-                    grid-template-columns: 1fr;
-                }
-            
-                .visi-misi-text h2 {
-                    font-size: 1.5rem;
-                }
-            
-                .foto-kegiatan h3 {
-                    font-size: 1.5rem;
-                }
-            }
+#visi-misi {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef); /* Gradien lembut */
+    padding: 60px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.visi-misi-text {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.visi-misi-text h2 {
+    font-size: 2.5rem;
+    color: #007BFF;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 123, 255, 0.2);
+}
+
+.visi-misi-text .visi, .visi-misi-text .misi {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.8;
+}
+
+.visi-misi-text .misi ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.visi-misi-text .misi ul li {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.visi-misi-text .misi strong {
+    color: #007BFF;
+    font-weight: bold;
+}
+
+/* Gaya untuk Foto Kegiatan */
+.foto-kegiatan {
+    margin-top: 60px;
+}
+
+.foto-kegiatan h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: #007BFF;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 123, 255, 0.3);
+}
+
+.foto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.foto-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    aspect-ratio: 4 / 3; /* Membuat foto seragam */
+}
+
+.foto-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.foto-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan foto terpotong rapi */
+    border-radius: 12px;
+    display: block;
+}
+
+.foto-description {
+    text-align: center;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    color: #333;
+    margin-top: -10px;
+    font-weight: 500;
+}
+
+.foto-description strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #007BFF;
+}
+
+.foto-description p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Responsif untuk ukuran layar kecil */
+@media (max-width: 768px) {
+    .foto-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .foto-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 
 
@@ -659,45 +657,66 @@
             </div>
         </section>
 
+        
+    <!-- Visi dan Misi -->
+    <div id="visi-misi">
+        <div class="visi-misi-text">
+            <h2>Visi dan Misi</h2>
+            <div class="visi">
+                <p><strong>Visi:</strong> Menjadi organisasi yang unggul dalam memberikan kontribusi nyata kepada masyarakat.</p>
+            </div>
+            <div class="misi">
+                <p><strong>Misi:</strong></p>
+                <ul>
+                    <li>Mengembangkan potensi anggota melalui pelatihan dan pendidikan berkualitas.</li>
+                    <li>Mendorong kolaborasi dalam menciptakan program yang berdampak positif.</li>
+                    <li>Menyediakan solusi kreatif untuk tantangan di masyarakat.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-        <div id="visi-misi">
-            <div class="visi-misi-text">
-                <h2>Visi dan Misi</h2>
-                <div class="visi">
-                    <p><strong>Visi:</strong> Menjadi organisasi yang unggul dalam memberikan kontribusi nyata kepada masyarakat.</p>
+    <!-- Foto Kegiatan -->
+    <div class="foto-kegiatan">
+        <h3>Foto Kegiatan</h3>
+        <div class="foto-grid">
+            <!-- Foto 1 -->
+            <div class="foto-item">
+                <img src="images/kegiatan1.jpg" alt="Kegiatan Sosial 2024">
+                <div class="foto-description">
+                    <strong>Kegiatan Sosial 2024</strong>
+                    <p>Membantu masyarakat dengan program sosial di pedesaan.</p>
                 </div>
-                <div class="misi">
-                    <p><strong>Misi:</strong></p>
-                    <ul>
-                        <li>Mengembangkan potensi anggota melalui pelatihan dan pendidikan berkualitas.</li>
-                        <li>Mendorong kolaborasi dalam menciptakan program yang berdampak positif.</li>
-                        <li>Menyediakan solusi kreatif untuk tantangan di masyarakat.</li>
-                    </ul>
+            </div>
+            <!-- Foto 2 -->
+            <div class="foto-item">
+                <img src="images/kegiatan2.jpeg" alt="Pelatihan dan Workshop">
+                <div class="foto-description">
+                    <strong>Pelatihan dan Workshop</strong>
+                    <p>Melatih anggota dengan keterampilan baru yang relevan.</p>
+                </div>
+            </div>
+            <!-- Foto 3 -->
+            <div class="foto-item">
+                <img src="images/kegiatan3.png" alt="Pengabdian Masyarakat">
+                <div class="foto-description">
+                    <strong>Pengabdian Masyarakat</strong>
+                    <p>Proyek kolaborasi untuk memperbaiki fasilitas umum.</p>
+                </div>
+            </div>
+            <!-- Foto 4 -->
+            <div class="foto-item">
+                <img src="images/kegiatan4.jpg" alt="Diskusi dan Kolaborasi">
+                <div class="foto-description">
+                    <strong>Diskusi dan Kolaborasi</strong>
+                    <p>Berbagi ide untuk meningkatkan efektivitas organisasi.</p>
                 </div>
             </div>
         </div>
-        
-        <div class="foto-kegiatan">
-    <h3>Foto Kegiatan</h3>
-    <div class="foto-grid">
-        <div class="foto-item">
-            <img src="images/kegiatan1.jpg" alt="Kegiatan 1">
-            <div class="foto-description">Kegiatan Sosial 2024</div>
-        </div>
-        <div class="foto-item">
-            <img src="images/kegiatan2.jpg" alt="Kegiatan 2">
-            <div class="foto-description">Pelatihan dan Workshop</div>
-        </div>
-        <div class="foto-item">
-            <img src="images/kegiatan3.jpg" alt="Kegiatan 3">
-            <div class="foto-description">Pengabdian Masyarakat</div>
-        </div>
-        <div class="foto-item">
-            <img src="images/kegiatan4.jpg" alt="Kegiatan 4">
-            <div class="foto-description">Diskusi dan Kolaborasi</div>
-        </div>
     </div>
-</div>
+</body>
+</html>
+
 
 
 
