@@ -260,36 +260,6 @@
 
 
             
-/* CSS untuk Visi dan Misi */
-#visi-misi {
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin-bottom: 30px;
-}
-
-.visi-misi-text h2 {
-    text-align: center;
-    color: #333;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.visi, .misi {
-    margin: 10px 0;
-}
-
-.visi p, .misi p, .misi ul {
-    color: #555;
-    line-height: 1.6;
-}
-
-.misi ul {
-    margin-left: 20px;
-    list-style-type: disc;
-}
-
 /* CSS untuk Foto Kegiatan */
 .foto-kegiatan {
     padding: 20px;
@@ -316,6 +286,10 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 350px; /* Tentukan tinggi yang sama */
 }
 
 .foto-item:hover {
@@ -325,16 +299,21 @@
 
 .foto-item img {
     width: 100%;
-    height: auto;
+    height: 200px; /* Tentukan tinggi yang sama untuk semua gambar */
+    object-fit: cover; /* Agar gambar tetap proporsional */
     border-bottom: 1px solid #ddd;
 }
 
 .foto-description {
     padding: 15px;
+    flex-grow: 1; /* Pastikan deskripsi memenuhi ruang yang tersedia */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .foto-description strong {
-    font-size: 18px;
+    font-size: 16px;
     color: #333;
 }
 
@@ -343,56 +322,6 @@
     color: #666;
     font-size: 14px;
     line-height: 1.5;
-}
-
-/* Media Queries untuk Responsivitas */
-@media (max-width: 768px) {
-    /* Grid layout berubah pada layar kecil */
-    .foto-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-
-    /* Ukuran font dan padding untuk Visi dan Misi */
-    #visi-misi {
-        padding: 15px;
-    }
-
-    .visi-misi-text h2 {
-        font-size: 20px;
-    }
-
-    .visi p, .misi p, .misi ul {
-        font-size: 14px;
-    }
-
-    /* Ukuran font pada deskripsi foto */
-    .foto-description strong {
-        font-size: 16px;
-    }
-
-    .foto-description p {
-        font-size: 13px;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Padding lebih kecil untuk perangkat sangat kecil */
-    #visi-misi, .foto-kegiatan {
-        padding: 10px;
-    }
-
-    /* Foto grid hanya satu kolom */
-    .foto-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .foto-description strong {
-        font-size: 14px;
-    }
-
-    .foto-description p {
-        font-size: 12px;
-    }
 }
 
 
