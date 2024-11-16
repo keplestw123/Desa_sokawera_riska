@@ -260,166 +260,162 @@
 
 
             
-/* CSS untuk Foto Kegiatan */
             /* CSS untuk Visi dan Misi */
-#visi-misi {
-    padding: 30px;
-    background-color: #fefefe;
-    border: 2px solid #00aaff;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-}
-
-.visi-misi-text h2 {
-    text-align: center;
-    color: #00aaff;
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    position: relative;
-}
-
-.visi-misi-text h2::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 4px;
-    background-color: #00aaff;
-    margin: 10px auto 0;
-    border-radius: 2px;
-}
-
-.visi, .misi {
-    margin: 20px 0;
-    padding: 15px;
-    border-left: 4px solid #00aaff;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-}
-
-.visi p, .misi p {
-    margin: 0;
-    color: #555;
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-.visi::before, .misi::before {
-    content: '';
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-    background-size: cover;
-}
-
-.visi::before {
-    background-image: url('images/vision-icon.png'); /* Ganti dengan ikon visi */
-}
-
-.misi::before {
-    background-image: url('images/mission-icon.png'); /* Ganti dengan ikon misi */
-}
-
-.misi ul {
-    margin: 10px 0 0 35px; /* Sesuaikan dengan posisi ikon */
-    padding-left: 15px;
-    list-style-type: disc;
-}
-
-.misi ul li {
-    color: #555;
-    font-size: 15px;
-    margin-bottom: 8px;
-}
-
-/* Responsivitas */
-@media (max-width: 768px) {
-    .visi, .misi {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
-    }
-
-    .visi::before, .misi::before {
-        margin: 0 0 10px 0;
-    }
-
-    .misi ul {
-        margin-left: 20px;
-    }
-}
-
+            #visi-misi {
+                padding: 30px;
+                background-color: #fefefe;
+                border: 2px solid #00aaff;
+                border-radius: 12px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                margin-bottom: 30px;
+            }
             
-.foto-kegiatan {
-    padding: 20px;
-}
-
-.foto-kegiatan h3 {
-    text-align: center;
-    color: #333;
-    font-size: 22px;
-    margin-bottom: 20px;
-}
-
-.foto-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.foto-item {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 350px; /* Tentukan tinggi yang sama */
-}
-
-.foto-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.foto-item img {
-    width: 100%;
-    height: 200px; /* Tentukan tinggi yang sama untuk semua gambar */
-    object-fit: cover; /* Agar gambar tetap proporsional */
-    border-bottom: 1px solid #ddd;
-}
-
-.foto-description {
-    padding: 15px;
-    flex-grow: 1; /* Pastikan deskripsi memenuhi ruang yang tersedia */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.foto-description strong {
-    font-size: 16px;
-    color: #333;
-}
-
-.foto-description p {
-    margin-top: 8px;
-    color: #666;
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-
-
+            .visi-misi-text h2 {
+                text-align: center;
+                color: #00aaff;
+                font-size: 28px;
+                font-weight: bold;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+                position: relative;
+            }
+            
+            .visi-misi-text h2::after {
+                content: '';
+                display: block;
+                width: 50px;
+                height: 4px;
+                background-color: #00aaff;
+                margin: 10px auto 0;
+                border-radius: 2px;
+            }
+            
+            .visi, .misi {
+                margin: 20px 0;
+                padding: 15px;
+                border-left: 4px solid #00aaff;
+                background-color: #f9f9f9;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+            }
+            
+            .visi p, .misi p {
+                margin: 0;
+                color: #555;
+                font-size: 16px;
+                line-height: 1.6;
+            }
+            
+            .visi::before, .misi::before {
+                content: '';
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+                margin-right: 10px;
+                background-size: cover;
+            }
+            
+            .visi::before {
+                background-image: url('images/vision-icon.png'); /* Ganti dengan ikon visi */
+            }
+            
+            .misi::before {
+                background-image: url('images/mission-icon.png'); /* Ganti dengan ikon misi */
+            }
+            
+            .misi ul {
+                margin: 10px 0 0 35px; /* Sesuaikan dengan posisi ikon */
+                padding-left: 15px;
+                list-style-type: disc;
+            }
+            
+            .misi ul li {
+                color: #555;
+                font-size: 15px;
+                margin-bottom: 8px;
+            }
+            
+            /* Responsivitas */
+            @media (max-width: 768px) {
+                .visi, .misi {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 10px;
+                }
+            
+                .visi::before, .misi::before {
+                    margin: 0 0 10px 0;
+                }
+            
+                .misi ul {
+                    margin-left: 20px;
+                }
+            }
+            
+                        
+            .foto-kegiatan {
+                padding: 20px;
+            }
+            
+            .foto-kegiatan h3 {
+                text-align: center;
+                color: #333;
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+            
+            .foto-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 20px;
+            }
+            
+            .foto-item {
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 350px; /* Tentukan tinggi yang sama */
+            }
+            
+            .foto-item:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            }
+            
+            .foto-item img {
+                width: 100%;
+                height: 200px; /* Tentukan tinggi yang sama untuk semua gambar */
+                object-fit: cover; /* Agar gambar tetap proporsional */
+                border-bottom: 1px solid #ddd;
+            }
+            
+            .foto-description {
+                padding: 15px;
+                flex-grow: 1; /* Pastikan deskripsi memenuhi ruang yang tersedia */
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            
+            .foto-description strong {
+                font-size: 16px;
+                color: #333;
+            }
+            
+            .foto-description p {
+                margin-top: 8px;
+                color: #666;
+                font-size: 14px;
+                line-height: 1.5;
+            }
 
 
 
@@ -693,62 +689,62 @@
         </section>
 
         
-   <!-- Visi dan Misi -->
-    <div id="visi-misi">
-        <div class="visi-misi-text">
-            <h2>Visi dan Misi</h2>
-            <div class="visi">
-                <p><strong>Visi:</strong> Menjadi organisasi yang unggul dalam memberikan kontribusi nyata kepada masyarakat.</p>
-            </div>
-            <div class="misi">
-                <p><strong>Misi:</strong></p>
-                <ul>
-                    <li>Mengembangkan potensi anggota melalui pelatihan dan pendidikan berkualitas.</li>
-                    <li>Mendorong kolaborasi dalam menciptakan program yang berdampak positif.</li>
-                    <li>Menyediakan solusi kreatif untuk tantangan di masyarakat.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <!-- Foto Kegiatan -->
-    <div class="foto-kegiatan">
-        <h3>Foto Kegiatan</h3>
-        <div class="foto-grid">
-            <!-- Foto 1 -->
-            <div class="foto-item">
-                <img src="images/kegiatan1.jpg" alt="Kegiatan Sosial 2024">
-                <div class="foto-description">
-                    <strong>Kegiatan Sosial 2024</strong>
-                    <p>Membantu masyarakat dengan program sosial di pedesaan.</p>
+       <!-- Visi dan Misi -->
+        <div id="visi-misi">
+            <div class="visi-misi-text">
+                <h2>Visi dan Misi</h2>
+                <div class="visi">
+                    <p><strong>Visi:</strong> Menjadi organisasi yang unggul dalam memberikan kontribusi nyata kepada masyarakat.</p>
                 </div>
-            </div>
-            <!-- Foto 2 -->
-            <div class="foto-item">
-                <img src="images/kegiatan2.jpeg" alt="Pelatihan dan Workshop">
-                <div class="foto-description">
-                    <strong>Pelatihan dan Workshop</strong>
-                    <p>Melatih anggota dengan keterampilan baru yang relevan.</p>
-                </div>
-            </div>
-            <!-- Foto 3 -->
-            <div class="foto-item">
-                <img src="images/kegiatan3.png" alt="Pengabdian Masyarakat">
-                <div class="foto-description">
-                    <strong>Pengabdian Masyarakat</strong>
-                    <p>Proyek kolaborasi untuk memperbaiki fasilitas umum.</p>
-                </div>
-            </div>
-            <!-- Foto 4 -->
-            <div class="foto-item">
-                <img src="images/kegiatan4.jpg" alt="Diskusi dan Kolaborasi">
-                <div class="foto-description">
-                    <strong>Diskusi dan Kolaborasi</strong>
-                    <p>Berbagi ide untuk meningkatkan efektivitas organisasi.</p>
+                <div class="misi">
+                    <p><strong>Misi:</strong></p>
+                    <ul>
+                        <li>Mengembangkan potensi anggota melalui pelatihan dan pendidikan berkualitas.</li>
+                        <li>Mendorong kolaborasi dalam menciptakan program yang berdampak positif.</li>
+                        <li>Menyediakan solusi kreatif untuk tantangan di masyarakat.</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </div>
+    
+        <!-- Foto Kegiatan -->
+        <div class="foto-kegiatan">
+            <h3>Foto Kegiatan</h3>
+            <div class="foto-grid">
+                <!-- Foto 1 -->
+                <div class="foto-item">
+                    <img src="images/kegiatan1.jpg" alt="Kegiatan Sosial 2024">
+                    <div class="foto-description">
+                        <strong>Kegiatan Sosial 2024</strong>
+                        <p>Membantu masyarakat dengan program sosial di pedesaan.</p>
+                    </div>
+                </div>
+                <!-- Foto 2 -->
+                <div class="foto-item">
+                    <img src="images/kegiatan2.jpeg" alt="Pelatihan dan Workshop">
+                    <div class="foto-description">
+                        <strong>Pelatihan dan Workshop</strong>
+                        <p>Melatih anggota dengan keterampilan baru yang relevan.</p>
+                    </div>
+                </div>
+                <!-- Foto 3 -->
+                <div class="foto-item">
+                    <img src="images/kegiatan3.png" alt="Pengabdian Masyarakat">
+                    <div class="foto-description">
+                        <strong>Pengabdian Masyarakat</strong>
+                        <p>Proyek kolaborasi untuk memperbaiki fasilitas umum.</p>
+                    </div>
+                </div>
+                <!-- Foto 4 -->
+                <div class="foto-item">
+                    <img src="images/kegiatan4.jpg" alt="Diskusi dan Kolaborasi">
+                    <div class="foto-description">
+                        <strong>Diskusi dan Kolaborasi</strong>
+                        <p>Berbagi ide untuk meningkatkan efektivitas organisasi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
@@ -757,7 +753,7 @@
         
         <!-- Geografis Section -->
         <section id="geografis">
-            <h2>Lokasi Desa Seliling</h2>
+            <h2>Lokasi Desa Sokawera</h2>
             <div id="map-container">
                 <div id="map">
                     <div id="popup" class="ol-popup">
@@ -772,10 +768,10 @@
         <footer id="kontak">
             <h3>Kontak Kami</h3>
             <ul class="contact-info">
-                <li><a href="mailto:info@desseliling.id">Email: info@desseliling.id</a></li>
+                <li><a href="mailto:info@desseliling.id">Email: info@sokawerabanyumas.id</a></li>
                 <li><a href="tel:+628123456789">Telepon: +62 812 3456 789</a></li>
             </ul>
-            <p>Alamat: Jl. Raya Desa Seliling, Kebumen, Jawa Tengah</p>
+            <p>Alamat: Jl. Raya Desa Sokawera, Banyumas, Jawa Tengah</p>
             
             <!-- Media Sosial -->
             <div class="social-media">
