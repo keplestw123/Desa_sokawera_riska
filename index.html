@@ -586,6 +586,42 @@
             </div>
         </div>
 
+        <!-- Kontak Section -->
+        <footer id="kontak">
+            <h3>Kontak Kami</h3>
+            <ul class="contact-info">
+                <li><a href="mailto:info@desseliling.id">Email: info@desseliling.id</a></li>
+                <li><a href="tel:+628123456789">Telepon: +62 812 3456 789</a></li>
+            </ul>
+            <p>Alamat: Jl. Raya Desa Seliling, Kebumen, Jawa Tengah</p>
+            
+            <!-- Media Sosial -->
+            <div class="social-media">
+                <a href="https://www.instagram.com/desseliling" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com/desseliling" target="_blank" class="social-icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </footer>
+
+        <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const hamburger = document.querySelector(".hamburger");
+                    const navBar = document.querySelector(".nav-bar");
+                    const lines = document.querySelectorAll(".hamburger .line");
+                    const scrollLink = document.querySelector('.scroll-to-visi-misi');
+        
+                    // Toggle the active class to show/hide the nav menu
+                    hamburger.addEventListener("click", () => {
+                        navBar.classList.toggle("active");
+        
+                        // Toggle the 'change' class on each line to animate the hamburger icon
+                        lines.forEach(line => line.classList.toggle("change"));
+                    });
+                });
+        </script>
 
 
 
