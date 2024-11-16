@@ -326,17 +326,16 @@
 
 .foto-item {
     position: relative;
-    overflow: hidden;
+    overflow: visible; /* Pastikan tidak ada elemen terpotong */
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    aspect-ratio: 4 / 3;
+    min-height: 350px; /* Tambahkan tinggi minimum */
 }
 
 .foto-item img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     border-radius: 12px;
     display: block;
 }
@@ -346,31 +345,13 @@
     padding: 15px;
     background-color: #fff;
     border-radius: 0 0 12px 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     font-size: 1rem;
     color: #333;
     font-weight: 500;
-    margin-top: 0;
+    display: block; /* Pastikan terlihat */
+    border: 1px solid red; /* Debugging */
 }
 
-.foto-description strong {
-    display: block;
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-    color: #007BFF;
-}
-
-.foto-description p {
-    margin: 0;
-    font-size: 0.95rem;
-    color: #555;
-}
-
-.foto-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 25px;
-}
 
 
 
