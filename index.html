@@ -261,6 +261,99 @@
 
             
 /* CSS untuk Foto Kegiatan */
+/* CSS untuk Visi dan Misi */
+#visi-misi {
+    padding: 30px;
+    background-color: #fefefe;
+    border: 2px solid #00aaff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.visi-misi-text h2 {
+    text-align: center;
+    color: #00aaff;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.visi-misi-text h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #00aaff;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.visi, .misi {
+    margin: 20px 0;
+    padding: 15px;
+    border-left: 4px solid #00aaff;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.visi p, .misi p {
+    margin: 0;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.visi::before, .misi::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    background-size: cover;
+}
+
+.visi::before {
+    background-image: url('images/vision-icon.png'); /* Ganti dengan ikon visi */
+}
+
+.misi::before {
+    background-image: url('images/mission-icon.png'); /* Ganti dengan ikon misi */
+}
+
+.misi ul {
+    margin: 10px 0 0 35px; /* Sesuaikan dengan posisi ikon */
+    padding-left: 15px;
+    list-style-type: disc;
+}
+
+.misi ul li {
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    .visi, .misi {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .visi::before, .misi::before {
+        margin: 0 0 10px 0;
+    }
+
+    .misi ul {
+        margin-left: 20px;
+    }
+}
+            
 .foto-kegiatan {
     padding: 20px;
 }
