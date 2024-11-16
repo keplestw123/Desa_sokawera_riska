@@ -12,6 +12,12 @@
         <link rel="stylesheet" type="text/css" href="resources/ol3-search-layer.min.css">
         <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
         <link rel="stylesheet" href="./resources/qgis2web.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">    
+        <link rel="stylesheet" href="styles.css">
+
+
         <style>
         html, body {
             background-color: #ffffff;
@@ -44,17 +50,549 @@
             margin: 0;
         }
         </style>
-        <title></title>
+
+
+
+
+        <title>Peta Interaktif Desa Seliling</title>
+        <!-- Custom Styling -->
+        <style>
+            /* Navbar */
+                body {
+                    padding: 0;
+                    margin: 0;
+                    box-sizing: border-box;
+                    font-family: 'Arial', sans-serif;
+                    scroll-behavior: smooth;
+                    scroll-padding-top: 3rem;
+                    background-color: #f4f4f4; /* Light background color */
+                    color: #333; /* Dark text color for readability */
+                }
+        
+                /* Header Styles */
+                header {
+                    position: fixed;
+                    height: 60px;
+                    padding: 0 3rem;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    z-index: 9999;
+                    background-color: rgba(0, 0, 0, 0.6); /* Slightly darker background for a more modern look */
+                    backdrop-filter: blur(10px);
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                    border-radius: 10px;
+                    transition: background-color 0.3s ease;
+                }
+        
+                .logo {
+                    font-size: 28px;
+                    font-weight: bold;
+                    color: #ffffff; /* White color for the logo */
+                    letter-spacing: 1px; /* Slight space between letters */
+                    text-transform: uppercase;
+                }
+        
+                .logo span {
+                    color: #0dfa60; /* Add a touch of color for emphasis */
+                }
+        
+                /* Hamburger Menu Styles */
+                .hamburger {
+                    display: none; /* Hidden by default */
+                    cursor: pointer;
+                    z-index: 10001; /* Ensure hamburger is clickable above the content */
+                }
+        
+                .hamburger .line {
+                    width: 30px;
+                    height: 4px;
+                    background-color: #fff; /* White lines for contrast */
+                    margin: 5px 0;
+                    transition: transform 0.3s ease, opacity 0.3s ease;
+                }
+        
+                .hamburger .line.change:nth-child(1) {
+                    transform: rotate(45deg) translateY(9px);
+                }
+        
+                .hamburger .line.change:nth-child(2) {
+                    opacity: 0;
+                }
+        
+                .hamburger .line.change:nth-child(3) {
+                    transform: rotate(-45deg) translateY(-9px);
+                }
+        
+                /* Nav Styles */
+                .nav-bar {
+                    display: flex;
+                    align-items: center;
+                }
+        
+                .nav-bar ul {
+                    list-style: none;
+                    display: flex;
+                    margin: 0;
+                }
+        
+                .nav-bar li {
+                    margin-left: 20px;
+                }
+        
+                .nav-bar a {
+                    color: #fff;
+                    text-decoration: none;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    letter-spacing: 1px;
+                    transition: color 0.3s ease, transform 0.3s ease;
+                }
+        
+                .nav-bar a:hover {
+                    color: #0dfa60; /* Hover effect with accent color */
+                    transform: scale(1.1);
+                }
+        
+                /* Media Query for Mobile */
+                @media (max-width: 768px) {
+                    .hamburger {
+                        display: block; /* Show hamburger menu on mobile */
+                    }
+        
+                    .nav-bar {
+                        display: none; /* Hide nav on mobile */
+                        position: absolute;
+                        top: 60px;
+                        right: 0;
+                        background-color: rgba(0, 0, 0, 0.9); /* Darker background for mobile */
+                        width: 250px;
+                        padding: 10px;
+                        border-radius: 8px;
+                        box-shadow: -2px 0 8px rgba(0, 0, 0, 0.3);
+                        transition: transform 0.3s ease-in-out;
+                        transform: translateX(100%);
+                    }
+        
+                    .nav-bar.active {
+                        display: flex;
+                        transform: translateX(0); /* Slide in the nav */
+                    }
+        
+                    .nav-bar ul {
+                        flex-direction: column;
+                        padding: 0;
+                        margin: 0;
+                    }
+        
+                    .nav-bar li {
+                        margin: 15px 0;
+                    }
+                }
+
+
+            /* Hero Section */
+            .hero {
+                background: url('images/bg.png') no-repeat center center/cover;
+                color: #fff;
+                text-align: center;
+                padding: 5rem 2rem;
+                background-size: cover;
+                background-position: center center;
+                height: 100vh;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            }
+
+            .hero h1 {
+                font-size: 3.5rem;
+                margin-bottom: 1.5rem;
+                font-weight: bold;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            }
+
+            .hero p {
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
+                line-height: 1.6;
+                max-width: 700px;
+                text-align: center;
+                font-style: italic;
+            }
+
+            .cta-button {
+                display: inline-block;
+                padding: 0.8rem 2rem;
+                background-color: #333;
+                color: #fff;
+                text-decoration: none;
+                font-weight: bold;
+                border-radius: 50px;
+                font-size: 1.2rem;
+                transition: all 0.3s ease;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+            .cta-button:hover {
+                background-color: #555;
+                transform: translateY(-3px);
+                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            }
+
+            .cta-button:active {
+                transform: translateY(1px);
+            }
+
+            /* Gaya untuk Visi dan Misi */
+            #visi-misi {
+                background-color: #ffffff;
+                padding: 40px 20px;
+            }
+            
+            .visi-misi-text {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            
+            .visi-misi-text h2 {
+                font-size: 2rem;
+                color: #333;
+                margin-bottom: 20px;
+            }
+            
+            .visi-misi-text .visi, .visi-misi-text .misi {
+                margin-bottom: 20px;
+            }
+            
+            .visi-misi-text .misi ul {
+                list-style-type: none;
+                padding: 0;
+            }
+            
+            .visi-misi-text .misi ul li {
+                margin-bottom: 10px;
+            }
+            
+            .visi-misi-text .misi strong {
+                color: #007BFF;
+            }
+            
+            /* Gaya untuk Foto Kegiatan */
+            .foto-kegiatan {
+                margin-top: 50px;
+            }
+            
+            .foto-kegiatan h3 {
+                text-align: center;
+                font-size: 1.8rem;
+                color: #333;
+                margin-bottom: 20px;
+            }
+            
+            .foto-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 20px;
+            }
+            
+            .foto-item img {
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+            
+            .foto-description {
+                text-align: center;
+                padding: 10px;
+                background-color: #fff;
+                border-radius: 0 0 8px 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            
+            /* Responsif untuk ukuran layar kecil */
+            @media (max-width: 768px) {
+                .visi-misi-text h2 {
+                    font-size: 1.5rem;
+                }
+            
+                .foto-kegiatan h3 {
+                    font-size: 1.5rem;
+                }
+            
+                .foto-grid {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+
+
+
+
+            /* geografis */
+            #geografis {
+                padding: 2rem; /* Menghapus padding agar elemen bisa mengisi seluruh layar */
+                height: 100vh; /* Membuat tinggi #geografis 100% dari tinggi layar */
+                background-color: #f4f4f4;
+                text-align: center;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: center; /* Menjaga konten tetap berada di tengah vertikal */
+                align-items: center; /* Menjaga konten tetap berada di tengah horizontal */
+            }
+
+            /* Bagian #geografis */
+            #geografis {
+                padding: 4rem 2rem; /* Default untuk desktop */
+            }
+            
+            #geografis h2 {
+                font-size: 2.5rem; /* Ukuran judul default */
+                margin-bottom: 2rem;
+                color: #0056b3;
+            }
+            
+            #geografis p {
+                font-size: 1.5rem;
+                line-height: 1.6;
+                color: #333;
+                margin-top: 1rem;
+            }
+            
+            #geografis ul {
+                list-style-type: none;
+                padding-left: 0;
+                margin-left: 20px;
+            }
+            
+            #geografis li {
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+                color: #333;
+            }
+            
+            /* Media query untuk tampilan tablet */
+            @media (max-width: 768px) {
+                #geografis {
+                    padding: 3rem 1.5rem;
+                }
+                #geografis h2 {
+                    font-size: 2rem;
+                }
+                #geografis p {
+                    font-size: 1.3rem;
+                }
+                #geografis li {
+                    font-size: 1.1rem;
+                }
+            }
+            
+            /* Media query untuk tampilan ponsel */
+            @media (max-width: 480px) {
+                #geografis {
+                    padding: 2rem 1rem; /* Padding lebih kecil untuk ponsel */
+                }
+                #geografis h2 {
+                    font-size: 1.8rem; /* Ukuran judul lebih kecil di ponsel */
+                }
+                #geografis p {
+                    font-size: 1.2rem;
+                }
+                #geografis li {
+                    font-size: 1rem;
+                }
+            }
+            
+            /* Bagian #map-container */
+            #map-container {
+                width: 100%;
+                height: 500px; /* Tinggi default untuk desktop */
+                max-width: 1000px;
+                margin: 1rem auto;
+                border: 5px solid #0056b3;
+                border-radius: 10px;
+                background-color: #e6f0ff;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+            }
+            
+            /* Media query untuk tampilan tablet */
+            @media (max-width: 768px) {
+                #map-container {
+                    height: 400px;
+                    margin: 1rem auto;
+                    border: 4px solid #0056b3;
+                }
+            }
+            
+            /* Media query untuk tampilan ponsel */
+            @media (max-width: 480px) {
+                #map-container {
+                    height: 300px;
+                    margin: 0.5rem auto;
+                    border: 3px solid #0056b3;
+                }
+            }
+            
+            /* Bagian #popup */
+            #popup {
+                background-color: rgba(255, 255, 255, 0.7);
+                border-radius: 5px;
+                padding: 10px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            }
+            
+            #popup-closer {
+                color: #333;
+                font-size: 1.2rem;
+                text-decoration: none;
+            }
+            
+            #popup-content {
+                font-size: 1rem;
+                color: #333;
+            }
+
+
+            /* Kontak Section */
+            #kontak {
+                background: linear-gradient(135deg, #0056b3, #00aaff); /* Warna gradien */
+                color: #fff;
+                padding: 3rem 1rem;
+                text-align: center;
+            }
+
+            #kontak h3 {
+                font-size: 2.5rem;
+                margin-bottom: 1.5rem;
+                color: #ffeb3b; /* Warna teks judul */
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+
+            .contact-info {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .contact-info li {
+                margin: 0.5rem 0;
+            }
+
+            .contact-info a {
+                text-decoration: none;
+                color: #fff;
+                font-size: 1.2rem;
+                font-weight: 500;
+                transition: color 0.3s ease;
+            }
+
+            .contact-info a:hover {
+                color: #ffeb3b; /* Efek hover */
+            }
+
+            /* Alamat */
+            #kontak p {
+                margin-top: 1rem;
+                font-size: 1.1rem;
+                font-style: italic;
+            }
+
+            /* Media Sosial */
+            .social-media {
+                margin-top: 2rem;
+                display: flex;
+                justify-content: center;
+                gap: 1.5rem;
+            }
+
+            .social-icon {
+                font-size: 2.5rem;
+                color: #fff;
+                transition: transform 0.3s ease, color 0.3s ease;
+            }
+
+            .social-icon:hover {
+                color: #ffeb3b; /* Efek hover */
+                transform: scale(1.15); /* Membesarkan sedikit saat di-hover */
+            }
+
+
+
+            /* Responsif */
+            @media (max-width: 768px) {
+                .hero h1 {
+                    font-size: 2.2rem;
+                }
+
+                .hero p {
+                    font-size: 1.1rem;
+                }
+
+                .cta-button {
+                    padding: 0.6rem 1.2rem;
+                }
+
+                #visi-misi h2 {
+                    font-size: 2rem;
+                }
+
+                .map {
+                    height: 300px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .hero h1 {
+                    font-size: 1.8rem;
+                }
+
+                .hero p {
+                    font-size: 1rem;
+                }
+
+                .cta-button {
+                    padding: 0.5rem 1rem;
+                }
+
+                #visi-misi h2 {
+                    font-size: 1.8rem;
+                }
+
+                .map {
+                    height: 250px;
+                }
+            }
+        </style>
     </head>
     <body>
+
+        
         <div id="map">
             <div id="popup" class="ol-popup">
                 <a href="#" id="popup-closer" class="ol-popup-closer"></a>
                 <div id="popup-content"></div>
             </div>
         </div>
+
+
+
+
+
+        
         <script src="resources/qgis2web_expressions.js"></script>
-<script src="resources/proj4.js"></script>
+        <script src="resources/proj4.js"></script>
         <script>proj4.defs('EPSG:4326','+proj=longlat +datum=WGS84 +no_defs');</script>
         <script src="./resources/functions.js"></script>
         <script src="./resources/ol.js"></script>
