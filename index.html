@@ -196,63 +196,67 @@
 
 
             /* Hero Section */
-            .hero {
-                background: url('images/bg.jpg') no-repeat center center/cover;
-                color: #fff;
-                text-align: center;
-                padding: 5rem 2rem;
-                background-size: cover;
-                background-position: center center;
-                height: 100vh;
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            }
+.hero {
+    background: url('images/bg.jpg') no-repeat center center/cover;
+    color: #f8f8f8; /* Warna lebih cerah untuk kontras */
+    text-align: center;
+    padding: 5rem 2rem;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Penambahan efek shadow lebih tajam */
+}
 
-            .hero h1 {
-                font-size: 3.5rem;
-                margin-bottom: 1.5rem;
-                font-weight: bold;
-                letter-spacing: 2px;
-                text-transform: uppercase;
-            }
+.hero h1 {
+    font-size: 4rem; /* Ukuran teks lebih besar */
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9); /* Shadow lebih jelas untuk kontras */
+    color: #ffd700; /* Warna kuning emas yang mencolok */
+}
 
-            .hero p {
-                font-size: 1.5rem;
-                margin-bottom: 2rem;
-                line-height: 1.6;
-                max-width: 700px;
-                text-align: center;
-                font-style: italic;
-            }
+.hero p {
+    font-size: 1.8rem; /* Teks lebih besar untuk keterbacaan */
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    max-width: 750px;
+    text-align: center;
+    font-style: italic;
+    color: #fafafa; /* Warna putih bersih */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Tambahan shadow */
+}
 
-            .cta-button {
-                display: inline-block;
-                padding: 0.8rem 2rem;
-                background-color: #333;
-                color: #fff;
-                text-decoration: none;
-                font-weight: bold;
-                border-radius: 50px;
-                font-size: 1.2rem;
-                transition: all 0.3s ease;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-            }
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem; /* Ukuran tombol lebih besar */
+    background-color: #007bff; /* Biru terang untuk daya tarik */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    font-size: 1.4rem; /* Teks tombol lebih besar */
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    box-shadow: 0 8px 15px rgba(0, 123, 255, 0.5); /* Shadow biru terang */
+}
 
-            .cta-button:hover {
-                background-color: #555;
-                transform: translateY(-3px);
-                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-            }
+.cta-button:hover {
+    background-color: #0056b3; /* Biru gelap saat hover */
+    transform: translateY(-5px); /* Efek hover lebih terasa */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Shadow lebih intens */
+}
 
-            .cta-button:active {
-                transform: translateY(1px);
-            }
-
+.cta-button:active {
+    transform: translateY(2px); /* Efek klik */
+}
             /* Gaya untuk Visi dan Misi */
             #visi-misi {
                 background-color: #ffffff;
