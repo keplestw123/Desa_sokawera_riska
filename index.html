@@ -260,113 +260,141 @@
 
 
             
-            /* Gaya untuk Visi dan Misi */
+/* CSS untuk Visi dan Misi */
 #visi-misi {
-    background: linear-gradient(135deg, #f8f9fa, #e9ecef); /* Gradien lembut */
-    padding: 60px 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.visi-misi-text {
-    text-align: center;
-    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 30px;
 }
 
 .visi-misi-text h2 {
-    font-size: 2.5rem;
-    color: #007BFF;
-    margin-bottom: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 5px rgba(0, 123, 255, 0.2);
-}
-
-.visi-misi-text .visi, .visi-misi-text .misi {
-    margin-bottom: 30px;
-    font-size: 1.2rem;
+    text-align: center;
     color: #333;
-    line-height: 1.8;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
-.visi-misi-text .misi ul {
-    list-style-type: disc;
-    padding-left: 20px;
+.visi, .misi {
+    margin: 10px 0;
 }
 
-.visi-misi-text .misi ul li {
-    margin-bottom: 15px;
+.visi p, .misi p, .misi ul {
     color: #555;
+    line-height: 1.6;
 }
 
-.visi-misi-text .misi strong {
-    color: #007BFF;
-    font-weight: bold;
+.misi ul {
+    margin-left: 20px;
+    list-style-type: disc;
 }
 
-/* Gaya untuk Foto Kegiatan */
+/* CSS untuk Foto Kegiatan */
 .foto-kegiatan {
-    margin-top: 60px;
+    padding: 20px;
 }
 
 .foto-kegiatan h3 {
     text-align: center;
-    font-size: 2rem;
-    color: #007BFF;
-    margin-bottom: 30px;
-    font-weight: bold;
-    text-shadow: 1px 1px 3px rgba(0, 123, 255, 0.3);
+    color: #333;
+    font-size: 22px;
+    margin-bottom: 20px;
 }
 
 .foto-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
 }
 
 .foto-item {
-    position: relative;
-    overflow: visible; /* Pastikan tidak ada elemen terpotong */
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    min-height: 350px; /* Tambahkan tinggi minimum */
+}
+
+.foto-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .foto-item img {
     width: 100%;
     height: auto;
-    border-radius: 12px;
-    display: block;
+    border-bottom: 1px solid #ddd;
 }
 
 .foto-description {
-    text-align: center;
     padding: 15px;
-    background-color: #fff;
-    border-radius: 0 0 12px 12px;
-    font-size: 1rem;
-    color: #333;
-    font-weight: 500;
-    display: block; /* Pastikan terlihat */
-    border: 1px solid red; /* Debugging */
 }
 
+.foto-description strong {
+    font-size: 18px;
+    color: #333;
+}
 
+.foto-description p {
+    margin-top: 8px;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
 
-
-/* Responsif untuk ukuran layar kecil */
+/* Media Queries untuk Responsivitas */
 @media (max-width: 768px) {
+    /* Grid layout berubah pada layar kecil */
     .foto-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    /* Ukuran font dan padding untuk Visi dan Misi */
+    #visi-misi {
+        padding: 15px;
+    }
+
+    .visi-misi-text h2 {
+        font-size: 20px;
+    }
+
+    .visi p, .misi p, .misi ul {
+        font-size: 14px;
+    }
+
+    /* Ukuran font pada deskripsi foto */
+    .foto-description strong {
+        font-size: 16px;
+    }
+
+    .foto-description p {
+        font-size: 13px;
     }
 }
 
 @media (max-width: 480px) {
+    /* Padding lebih kecil untuk perangkat sangat kecil */
+    #visi-misi, .foto-kegiatan {
+        padding: 10px;
+    }
+
+    /* Foto grid hanya satu kolom */
     .foto-grid {
         grid-template-columns: 1fr;
     }
+
+    .foto-description strong {
+        font-size: 14px;
+    }
+
+    .foto-description p {
+        font-size: 12px;
+    }
 }
+
 
 
 
